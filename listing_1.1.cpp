@@ -18,6 +18,8 @@ int main()  //应用的起始线程，the initial thread in an application，bri
     join() is there e—as described in chapter 2, this causes
  the calling thread (in main()) to wait for the thread associated with the std::thread
  object, in this case, t
+ 线程启动以后，控制权转交给main函数，接着执行其他codes，所以需要让main调用函数来等待线程执行完成，
+ 否则可能main函数执行完了，但是线程还没有执行完，main执行完以后会退出程序，会关闭所有线程。所以join等待操作是必须的。
     */
     t.join(); // join()函数会导致调用函数（这的话就是main）等待线程t执行完成
     tt.join();
