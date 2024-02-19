@@ -7,12 +7,12 @@ void some_function()
 void some_other_function(int)
 {}
 
-std::thread f()
+std::thread f() // return temp thread object，transfer ownership，返回thread临时对象的，涉及到所有权的转移
 {
     void some_function();
     return std::thread(some_function);
 }
-std::thread g()
+std::thread g() // return thread object，transfer ownership，返回thread临时对象的，涉及到所有权的转移
 {
     void some_other_function(int);
     std::thread t(some_other_function,42);
