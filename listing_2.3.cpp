@@ -25,8 +25,8 @@ public:
             t.join();
         }
     }
-    // delete copy constructor，delete operator = function
-    // 删除复制构造函数，删除重载运算符 “=”
+    // delete copy constructor，delete operator = function，ensure that they’re not automatically provided by the compiler
+    // 删除复制构造函数，删除赋值函数重载运算符 “=”，防止编译器自动提供这两个函数
     thread_guard(thread_guard const&)=delete;
     thread_guard& operator=(thread_guard const&)=delete;
 };
