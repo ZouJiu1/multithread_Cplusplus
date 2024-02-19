@@ -17,7 +17,9 @@ public:
     // 析构函数会自动调用join()函数，若是发生了exception，也会自动调用析构函数，所以不需要多次调用join
     // waiting for the thread execution finished，等待线程执行完毕的
     ~thread_guard()  //destructor
-    {// check whether thread has been joined or exit，检查线程是否已经被join或者已经退出
+    {// check whether thread has been joined or exit，necessarily because join() can be called only once for a given thread of execution
+    // 检查线程是否已经被join或者已经退出，执行的线程只能调用一次join函数
+
         if(t.joinable())
         {
             t.join();
