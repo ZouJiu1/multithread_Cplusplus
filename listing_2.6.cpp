@@ -1,6 +1,7 @@
 //Download by www.cctry.com
 #include <thread>
 #include <utility>
+#include <stdexcept>
 
 class scoped_thread
 {
