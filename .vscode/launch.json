@@ -16,8 +16,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/zj/program/ccia_code_samples-master/listings",
-      "program": "/home/zj/program/ccia_code_samples-master/listings/build/Debug/outDebug",
+      "cwd": "${fileDirname}",
+      "program": "${fileDirname}/a.out",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
